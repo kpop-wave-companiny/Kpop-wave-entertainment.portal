@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Wave Entertainment Portal | 2026 Registry Matrix</title>
+    <!-- Tailwind CSS Engine for cross-device fluidity -->
+    <script src="https://tailwindcss.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f19; color: #f3f4f6; -webkit-font-smoothing: antialiased; }
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        #google_translate_element select {
+            background-color: #1f2937; color: #f3f4f6; border: 1px solid #374151;
+            padding: 0.5rem; border-radius: 0.5rem; outline: none; cursor: pointer; width: 100%; max-width: 160px; font-size: 0.875rem;
+        }
+        /* Custom scrollbar optimized for both mouse wheel and mobile touch panes */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #111827; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- UNIVERSAL NAVIGATION HEADER -->
+    <header class="border-b border-gray-800 bg-gray-900/90 backdrop-blur sticky top-0 z-50 px-4 sm:px-6 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <h1 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent tracking-wide">
+                    K-POP WAVE ENTERTAINMENT PORTAL
+                </h1>
+                <p class="text-xs text-gray-400 mt-0.5">Comprehensive Global Industry Directory & Fan Desk — Matrix 2026</p>
+            </div>
+            
+            <!-- Global Translation Anchor (Configured for multi-device styling) -->
+            <div class="flex items-center gap-2 bg-gray-800 p-2 rounded-xl border border-gray-700 w-full sm:w-auto justify-center sm:justify-start">
+                <span class="text-xs font-semibold text-gray-300 px-1 whitespace-nowrap">🌐 Translate:</span>
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- RESPONSIVE GRID CONTROL MAIN SUITE -->
+    <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- DIRECTORY DISCOVERY ENGINE -->
+        <section class="lg:col-span-7 space-y-6 order-2 lg:order-1">
+            <div class="bg-gray-900 border border-gray-800 p-4 sm:p-6 rounded-2xl shadow-xl">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h2 class="text-lg sm:text-xl font-bold text-white">Agency Directory Search</h2>
+                        <p class="text-xs sm:text-sm text-gray-400">Live filtering through all 102 South Korean agencies & sub-labels.</p>
+                    </div>
+                    <span id="counterDisplay" class="bg-purple-900/60 text-purple-300 text-xs font-bold px-2.5 py-1 rounded-md border border-purple-700/50">102 / 102</span>
+                </div>
+                
+                <div class="space-y-3">
+                    <input type="text" id="searchBar" onkeyup="filterRegistryData()" placeholder="Type agency or sub-label name to filter instantly..." 
+                           class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple-500 transition-colors">
+                    
+                    <!-- Responsive Segment Sorting Tags -->
+                    <div class="flex flex-wrap gap-1.5 pt-1">
+                        <button onclick="filterCategory('All', this)" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-600 text-white transition-all">All 102 Entities</button>
+                        <button onclick="filterCategory('Big 4 Ecosystem', this)" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Big 4 & Sub-labels</button>
+                        <button onclick="filterCategory('Conglomerate Subsidiary', this)" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Kakao / CJ ENM</button>
+                        <button onclick="filterCategory('Independent Label', this)" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all">Independents</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optimized layout box for cross-platform scrolling viewports -->
+            <div id="registryGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[550px] lg:max-h-[680px] overflow-y-auto pr-1 custom-scrollbar">
+                <!-- Javascript maps out all 102 arrays perfectly here -->
+            </div>
+        </section>
+
+        <!-- FAN ADVOCACY WORKFLOW DESK -->
+        <section class="lg:col-span-5 order-1 lg:order-2">
+            <div class="bg-gray-900 border border-purple-900/30 p-4 sm:p-6 rounded-2xl shadow-xl sticky top-24">
+                <div class="border-b border-gray-800 pb-3 mb-4">
+                    <h2 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                        <span>📋</span> Fan Advocacy & Inquiry Desk
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-0.5">Submit official agency requests, membership card bookings, and priority tracking.</p>
+                </div>
+
+                <!-- Complete Integrated Formspree Production Interface -->
+                <form action="https://formspree.io" method="POST" class="space-y-3.5">
+                    
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">* Name</label>
+                        <input type="text" name="Name" required placeholder="Enter full name" 
+                               class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3.5 py-2 text-white text-sm focus:outline-none focus:border-purple-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">* Email</label>
+                        <input type="email" name="Email" required placeholder="name@email.com" 
+                               class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3.5 py-2 text-white text-sm focus:outline-none focus:border-purple-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">* Target Artist / Group</label>
+                        <select name="Target Artist / Group" required 
+                                class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3.5 py-2 text-white text-sm focus:outline-none focus:border-purple-500">
+                            <option value="">-- Select Target Destination --</option>
+                            <option value="BTS">BTS</option>
+                            <option value="FATAGIO/ASTRO">FATAGIO/ASTRO</option>
+                            <option value="FNC/SF9">FNC/SF9</option>
+                            <option value="Black Label">Black Label</option>
+                            <option value="General Entertainment Inquiry">General Entertainment Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">* Inquiry-Type</label>
+                        <select name="Inquiry Type" required 
+                                class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3.5 py-2 text-white text-sm focus:outline-none focus:border-purple-500">
+                            <option value="">-- Choose processing type --</option>
+                            <option value="Official Membership Card Booking">Official Membership Card Booking</option>
+                            <option value="Fan Club Tier Upgrade (VIP/Premium/Gold)">Fan Club Tier Upgrade (VIP/Premium/Gold)</option>
+                            <option value="Event Ticketing Support">Event Ticketing Support</option>
+                            <option value="Report Fake Profiles & Imposters">Report Fake Profiles & Imposters</option>
+                            <option value="Meet & Greet/1-on-1 Meeting">Meet & Greet/1-on-1 Meeting</option>
+                            <option value="Dinner Date Request (Post-Event)">Dinner Date Request (Post-Event)</option>
+                            <option value="Vacation & Contract Termination">Vacation & Contract Termination</option>
+                            <option value="Charity support e.g orphanage etc.">Charity support e.g orphanage etc.</option>
+                            <option value="Book for membership card & VIP membership card">Book for membership card & VIP membership card</option>
+                            <option value="Registration for VIP membership benefit ($3.000)">Registration for VIP membership benefit ($3.000)</option>
+                            
