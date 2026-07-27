@@ -44,7 +44,7 @@
     <!-- Main Layout -->
     <main class="max-w-[1400px] mx-auto w-full p-4 md:p-8 grid grid-cols-1 lg:grid-cols-7 gap-8 flex-grow">
         
-        <!-- Left Panel: Registry & Events (7fr on desktop) -->
+        <!-- Left Panel: Registry & Events -->
         <div class="lg:col-span-4 flex flex-col gap-6 mobile-order-1">
             
             <!-- Registry Card -->
@@ -71,9 +71,7 @@
                 <div id="registryGrid" class="registry-grid-box grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[500px] overflow-y-auto pr-2 mt-4">
                     <!-- Dynamic Cards Render Here -->
                 </div>
-            </div>
-
-            <!-- Automated Events Feed -->
+            </div><!-- Automated Events Feed -->
             <div class="bg-[#111827] border border-[#1f2937] p-5 rounded-2xl shadow-xl">
                 <div class="flex justify-between items-start mb-3">
                     <div>
@@ -92,7 +90,7 @@
 
         </div>
 
-        <!-- Right Panel: Fan Inquiry Desk (3fr on desktop) -->
+        <!-- Right Panel: Fan Inquiry Desk -->
         <div class="lg:col-span-3 mobile-order-2">
             <div class="bg-[#111827] border border-purple-900/50 p-6 rounded-2xl shadow-2xl sticky top-24">
                 <div class="mb-4">
@@ -100,7 +98,7 @@
                     <p class="text-xs text-purple-300 mt-0.5">Official Direct Management Dispatcher</p>
                 </div>
 
-                <form id="inquiryForm" action="https://formspree.io" method="POST" onsubmit="handleFormSubmit(event)">
+                <form id="inquiryForm" action="https://formspree.io/f/xykrybvv" method="POST" onsubmit="handleFormSubmit(event)">
                     <div class="mb-3.5">
                         <label class="block text-[11px] font-semibold uppercase text-gray-400 mb-1.5">Your Name</label>
                         <input type="text" name="name" required class="w-full bg-[#1f2937] border border-[#374151] rounded-xl px-3.5 py-2.5 text-white text-sm outline-none focus:border-purple-500" placeholder="Enter full name">
@@ -162,7 +160,7 @@
         </div>
     </main>
 
-    <!-- Success Modal Notification (Pop-up with Thumbs Up Icon) -->
+    <!-- Success Modal Notification -->
     <div id="successModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4 hidden">
         <div class="bg-[#111827] border border-purple-500/50 max-w-md w-full p-6 rounded-2xl shadow-2xl text-center relative transform transition-all scale-95 opacity-0" id="modalCard">
             <div class="w-16 h-16 bg-gradient-to-tr from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">
@@ -176,14 +174,12 @@
                 Understood & Return to Portal
             </button>
         </div>
-    </div>
-
-    <!-- Footer -->
+    </div> <!-- Footer -->
     <footer class="border-t border-[#1f2937] bg-[#030712] text-center p-4 text-xs text-gray-500 mt-auto">
         © 2026 K-Pop Wave Entertainment Portal. Matrix Network. All rights reserved.
     </footer>
 
-    <!-- Tawk.to Live Support Widget Code Injection (Exact User Script) -->
+    <!-- Tawk.to Live Support Widget Code Injection -->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
@@ -205,7 +201,8 @@
             { name: "Source Music", group: "Big 4 Ecosystem", desc: "Specialized girl group music development arm acquired by HYBE. Prominently produces and manages LE SSERAFIM." },
             { name: "ADOR", group: "Big 4 Ecosystem", desc: "Boutique global pop concept agency under HYBE framework. Home to record-breaking continuous hitmakers NewJeans." },
             { name: "KOZ Entertainment", group: "Big 4 Ecosystem", desc: "Trendsetting alternative, hip-hop and pop-focused subsidiary founded by Zico. Home to BOYNEXTDOOR." },
-            { name: "HYBE Labels Japan", group: "Big 4 Ecosystem", desc: "Tokyo-localized performance management infrastructure expanding market visibility. Manages global pop band &TEAM." },{ name: "NAECO", group: "Big 4 Ecosystem", desc: "HYBE localized independent subsidiary agency specializing in tracking premier domestic Japanese solo actor-artist profiles." },
+            { name: "HYBE Labels Japan", group: "Big 4 Ecosystem", desc: "Tokyo-localized performance management infrastructure expanding market visibility. Manages global pop band &TEAM." },
+            { name: "NAECO", group: "Big 4 Ecosystem", desc: "HYBE localized independent subsidiary agency specializing in tracking premier domestic Japanese solo actor-artist profiles." },
             { name: "SM Entertainment", group: "Big 4 Ecosystem", desc: "Legendary powerhouse creator of generational modern idol blueprints. Rules rosters including NCT, Aespa, RIIZE, and Red Velvet." },
             { name: "Mystic Story", group: "Big 4 Ecosystem", desc: "Subsidiary creative division under SM Entertainment focused on alternative pop bands, balladeers, and actors. Manages Billlie." },
             { name: "ScreaM Records", group: "Big 4 Ecosystem", desc: "Electronic dance music label sub-division under SM Entertainment. Produces global remixes and EDM projects." },
@@ -265,8 +262,7 @@
             { name: "Blissoo", group: "Independent Label", desc: "Jisoo personal artist operations label." },
             { name: "MLD Entertainment", group: "Independent Label", desc: "Registered Indie Entity (Lapillus)." },
             { name: "Maroo Entertainment", group: "Independent Label", desc: "Independent Seoul Studio Group (Ghost9)." },
-            { name: "PocketDol Studio", group: "Independent Label", desc: "MBK Media Associated Sub-Label (BAE173)." },
-            { name: "TR Entertainment", group: "Independent Label", desc: "Independent Music Production Label (TRI.BE)." },
+            { name: "PocketDol Studio", group: "Independent Label", desc: "MBK Media Associated Sub-Label (BAE173)." },{ name: "TR Entertainment", group: "Independent Label", desc: "Independent Music Production Label (TRI.BE)." },
             { name: "GLG (Grandline Group)", group: "Independent Label", desc: "Boutique Production Label House (H1-KEY)." },
             { name: "OUI Entertainment", group: "Independent Label", desc: "Mid-Tier Independent Label Platform (WEi)." },
             { name: "Beat Interactive", group: "Independent Label", desc: "Boutique Concept Management Unit (A.C.E)." },
@@ -297,7 +293,8 @@
             { name: "One Cool Jacso", group: "Independent Label", desc: "Cross-Border Local Independent Sub-Label." },
             { name: "VT Entertainment", group: "Independent Label", desc: "Boutique Independent Training House." },
             { name: "J-Rock KR Division", group: "Independent Label", desc: "Strategic Regional Independent Office." },
-            { name: "WH Creative", group: "Independent Label", desc: "Independent Boutique Artist Curation Label." },{ name: "220 Entertainment", group: "Independent Label", desc: "Independent Local Pop Music Production Label." },
+            { name: "WH Creative", group: "Independent Label", desc: "Independent Boutique Artist Curation Label." },
+            { name: "220 Entertainment", group: "Independent Label", desc: "Independent Local Pop Music Production Label." },
             { name: "Unbound Entertainment", group: "Independent Label", desc: "Boutique Global Management Sub-Agency Unit." }
         ];
 
@@ -343,9 +340,7 @@
                     </div>`;
             });
             document.getElementById('counterDisplay').innerText = `${data.length} / 102`;
-        }
-
-        function renderLiveEvents(data) {
+        }function renderLiveEvents(data) {
             const container = document.getElementById('liveEventsContainer');
             container.innerHTML = "";
             if(data.length === 0) {
@@ -393,7 +388,6 @@
             document.getElementById('searchBar').value = "";
         }
 
-        // Real-time automatic event simulation updates
         setInterval(() => {
             if(fakeNewPool.length > 0) {
                 const newAnnouncement = fakeNewPool.shift();
@@ -402,7 +396,6 @@
             }
         }, 15000);
 
-        // Form submission modal trigger
         function handleFormSubmit(event) {
             event.preventDefault();
             const form = event.target;
