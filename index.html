@@ -71,20 +71,21 @@
                 <div id="registryGrid" class="registry-grid-box grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[500px] overflow-y-auto pr-2 mt-4">
                     <!-- Dynamic Cards Render Here -->
                 </div>
-            </div><!-- Automated Events Feed -->
+            </div>
+            <!-- Automated Events Feed -->
             <div class="bg-[#111827] border border-[#1f2937] p-5 rounded-2xl shadow-xl">
                 <div class="flex justify-between items-start mb-3">
                     <div>
                         <h2 class="text-lg font-bold text-white">Live Automated Events Tracker</h2>
-                        <p class="text-xs text-gray-400 mt-0.5">Real-time comeback & global concert schedules</p>
+                        <p class="text-xs text-gray-400 mt-0.5">Real-time worldwide K-Pop updates (Fully Auto)</p>
                     </div>
-                    <span class="bg-pink-900/40 text-pink-300 text-[10px] font-bold px-2 py-0.5 border border-pink-500/30 rounded animate-pulse">Live Feed Active</span>
+                    <span class="bg-pink-900/40 text-pink-300 text-[10px] font-bold px-2 py-0.5 border border-pink-500/30 rounded animate-pulse" id="feedStatus">Fetching Live...</span>
                 </div>
 
-                <input type="text" id="eventSearchBar" onkeyup="filterLiveEvents()" placeholder="Search active artist events..." class="w-full bg-[#1f2937] border border-[#374151] rounded-xl px-4 py-2.5 text-white text-sm outline-none focus:border-pink-500 mb-3">
+                <input type="text" id="eventSearchBar" onkeyup="filterLiveEvents()" placeholder="Search live updates..." class="w-full bg-[#1f2937] border border-[#374151] rounded-xl px-4 py-2.5 text-white text-sm outline-none focus:border-pink-500 mb-3">
 
                 <div id="liveEventsContainer" class="event-list-box max-h-[260px] overflow-y-auto flex flex-col gap-2.5 pr-1">
-                    <!-- Dynamic Events Render Here -->
+                    <!-- Automated Events Render Here -->
                 </div>
             </div>
 
@@ -134,8 +135,7 @@
                             <option value="Registration for VIP membership benefit ($3.000)">Registration for VIP Membership Benefit ($3,000)</option>
                             <option value="General Fan Advocacy Support">General Fan Advocacy Support</option>
                             <option value="Favorite Idol Support / Getting Photo Books">Favorite Idol Support / Getting Photo Books</option>
-                        </select>
-                    </div>
+                        </select></div>
 
                     <div class="mb-3.5">
                         <label class="block text-[11px] font-semibold uppercase text-gray-400 mb-1.5">Favorite K-Pop Idol Name</label>
@@ -174,7 +174,9 @@
                 Understood & Return to Portal
             </button>
         </div>
-    </div> <!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="border-t border-[#1f2937] bg-[#030712] text-center p-4 text-xs text-gray-500 mt-auto">
         © 2026 K-Pop Wave Entertainment Portal. Matrix Network. All rights reserved.
     </footer>
@@ -210,8 +212,7 @@
             { name: "Label SJ", group: "Big 4 Ecosystem", desc: "Customized dedicated management unit established inside SM Entertainment exclusively for veteran legends Super Junior." },
             { name: "Label V", group: "Big 4 Ecosystem", desc: "Specialized subsidiary branch of SM Entertainment coordinating all active promotions for Chinese market localized unit WayV." },
             { name: "YG Entertainment", group: "Big 4 Ecosystem", desc: "Iconic powerhouse driving the global hip-hop influence across Korean music. Roster features BLACKPINK, TREASURE, and BABYMONSTER." },
-            { name: "The Black Label", group: "Big 4 Ecosystem", desc: "YG partner agency and production powerhouse headed by producer Teddy Park. Manages Somi, Taeyang, and rookie group MEOVV." },
-            { name: "YG Plus", group: "Big 4 Ecosystem", desc: "Auxiliary corporate distribution network under YG managing high-volume music distribution, merchandise curation, and global physical media." },
+            { name: "The Black Label", group: "Big 4 Ecosystem", desc: "YG partner agency and production powerhouse headed by producer Teddy Park. Manages Somi, Taeyang, and rookie group MEOVV." },{ name: "YG Plus", group: "Big 4 Ecosystem", desc: "Auxiliary corporate distribution network under YG managing high-volume music distribution, merchandise curation, and global physical media." },
             { name: "JYP Division 1", group: "Big 4 Ecosystem", desc: "Internal rapid-production label pipeline created by JYP Entertainment to manage groups 2PM and global touring leaders Stray Kids." },
             { name: "JYP Division 2", group: "Big 4 Ecosystem", desc: "Internal customized task force division operating within JYP Entertainment to direct global charting lines ITZY and NEXZ." },
             { name: "JYP Division 3", group: "Big 4 Ecosystem", desc: "Dedicated global production pipeline managing TWICE and related solo artist operations." },
@@ -230,8 +231,7 @@
             { name: "Modhaus", group: "Conglomerate Subsidiary", desc: "Innovative blockchain-backed fan participation agency managing tripleS and ARTMS." },
             { name: "Lapone Entertainment", group: "Conglomerate Subsidiary", desc: "Joint venture between CJ ENM and Yoshimoto Kogyo managing JO1 and INI." },
             { name: "AOMG", group: "Conglomerate Subsidiary", desc: "Renowned independent hip-hop and R&B record label operating under CJ ENM partnership." },
-            { name: "H1ghr Music", group: "Conglomerate Subsidiary", desc: "Global hip-hop label affiliate under the CJ ENM ecosystem focusing on street culture, urban rappers, and crossover artists." },
-            { name: "Amoeba Culture", group: "Conglomerate Subsidiary", desc: "Longstanding urban hip-hop agency and distribution network allied with major conglomerate funding matrix channels." },
+            { name: "H1ghr Music", group: "Conglomerate Subsidiary", desc: "Global hip-hop label affiliate under the CJ ENM ecosystem focusing on street culture, urban rappers, and crossover artists." },{ name: "Amoeba Culture", group: "Conglomerate Subsidiary", desc: "Longstanding urban hip-hop agency and distribution network allied with major conglomerate funding matrix channels." },
             { name: "RBW (Rainbow Bridge World)", group: "Independent Label", desc: "Publicly traded multi-label corporate powerhouse famous for vocal mastery. Roster includes Mamamoo, Oneus, and Purple Kiss." },
             { name: "WM Entertainment", group: "Independent Label", desc: "Established pop agency acquired by RBW group. Maintains independent management over groups Oh My Girl, ONF, and Lee Chae-yeon." },
             { name: "DSP Media", group: "Independent Label", desc: "Historic legacy agency fully integrated into the RBW ecosystem to handle active pop groups KARD, MIRAE, and Young Posse." },
@@ -262,7 +262,8 @@
             { name: "Blissoo", group: "Independent Label", desc: "Jisoo personal artist operations label." },
             { name: "MLD Entertainment", group: "Independent Label", desc: "Registered Indie Entity (Lapillus)." },
             { name: "Maroo Entertainment", group: "Independent Label", desc: "Independent Seoul Studio Group (Ghost9)." },
-            { name: "PocketDol Studio", group: "Independent Label", desc: "MBK Media Associated Sub-Label (BAE173)." },{ name: "TR Entertainment", group: "Independent Label", desc: "Independent Music Production Label (TRI.BE)." },
+            { name: "PocketDol Studio", group: "Independent Label", desc: "MBK Media Associated Sub-Label (BAE173)." },
+            { name: "TR Entertainment", group: "Independent Label", desc: "Independent Music Production Label (TRI.BE)." },
             { name: "GLG (Grandline Group)", group: "Independent Label", desc: "Boutique Production Label House (H1-KEY)." },
             { name: "OUI Entertainment", group: "Independent Label", desc: "Mid-Tier Independent Label Platform (WEi)." },
             { name: "Beat Interactive", group: "Independent Label", desc: "Boutique Concept Management Unit (A.C.E)." },
@@ -277,8 +278,7 @@
             { name: "Chrome Entertainment", group: "Independent Label", desc: "Legacy Boutique Independent Label." },
             { name: "B2M Legacy Division", group: "Independent Label", desc: "Independent Auxiliary Portfolio Vault." },
             { name: "Elen Entertainment", group: "Independent Label", desc: "Boutique Music Management Group." },
-            { name: "Double H TNE", group: "Independent Label", desc: "Independent Subsidiary Curation Management." },
-            { name: "Coridel Entertainment", group: "Independent Label", desc: "Independent Boutique Music Platform." },
+            { name: "Double H TNE", group: "Independent Label", desc: "Independent Subsidiary Curation Management." },{ name: "Coridel Entertainment", group: "Independent Label", desc: "Independent Boutique Music Platform." },
             { name: "SWMP Group", group: "Independent Label", desc: "Independent Specialized Media Co." },
             { name: "Think Entertainment", group: "Independent Label", desc: "Independent Pop & Variety Label Platform." },
             { name: "Majesty Agency", group: "Independent Label", desc: "Seoul Registered Indie Production Office." },
@@ -298,27 +298,52 @@
             { name: "Unbound Entertainment", group: "Independent Label", desc: "Boutique Global Management Sub-Agency Unit." }
         ];
 
-        let activeLiveEvents = [
-            { group: "BTS", type: "Comeback", detail: "Global Studio Album Release Showcase", date: "Aug 12, 2026" },
-            { group: "ASTRO", type: "Fanmeeting", detail: "Seoul Special Fan Zone Gathering", date: "Aug 29, 2026" },
-            { group: "SF9", type: "Concert", detail: "Asia Tour Live Terminal Opener", date: "Sept 05, 2026" },
-            { group: "Stray Kids", type: "World Tour", detail: "Dominion Stadium Concert Day 1", date: "Aug 18, 2026" },
-            { group: "NewJeans", type: "Showcase", detail: "Boutique Concept Track Premium Airing", date: "Aug 22, 2026" },
-            { group: "MEOVV", type: "Fan Sign", detail: "The Black Label Core Arena Event", date: "Sept 11, 2026" }
-        ];
+        let activeLiveEvents = [];
 
-        const fakeNewPool = [
-            { group: "BLACKPINK", type: "World Tour", detail: "Born Pink Stadium Anniversary Opener", date: "Oct 02, 2026" },
-            { group: "IVE", type: "Comeback", detail: "Mini Album Press Streaming Event", date: "Sept 20, 2026" },
-            { group: "ATEEZ", type: "Concert", detail: "World Curation Tour Final Stage", date: "Oct 15, 2026" }
-        ];
+        // 100% AUTOMATED FETCHER: Pulls live K-Pop news via public RSS API automatically
+        async function fetchLiveKpopUpdates() {
+            try {
+                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.soompi.com%2Ffeed');
+                const data = await response.json();
+                
+                if (data && data.items) {
+                    activeLiveEvents = data.items.map(item => {
+                        let title = item.title;
+                        let tagType = "News";
+                        if (title.toLowerCase().includes('comeback')) tagType = "Comeback";
+                        else if (title.toLowerCase().includes('tour') || title.toLowerCase().includes('concert')) tagType = "Tour";
+                        else if (title.toLowerCase().includes('debut')) tagType = "Debut";
+                        else if (title.toLowerCase().includes('watch:')) tagType = "Video";
+
+                        let cleanDetail = title.replace(/^(Watch|Update|Listen): /i, '');
+                        if(cleanDetail.length > 55) cleanDetail = cleanDetail.substring(0, 52) + '...';
+
+                        let pubDate = new Date(item.pubDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+                        return {
+                            group: "K-Pop Alert",
+                            type: tagType,
+                            detail: cleanDetail,
+                            date: pubDate,
+                            link: item.link
+                        };
+                    });
+                    
+                    document.getElementById('feedStatus').innerText = "Live Feed Active";
+                    renderLiveEvents(activeLiveEvents);
+                }
+            } catch (error) {
+                document.getElementById('feedStatus').innerText = "Feed Offline";
+                document.getElementById('liveEventsContainer').innerHTML = '<div class="text-center py-6 text-gray-400 text-xs">Waiting for connection to global feed...</div>';
+            }
+        }
 
         function renderRegistryDatabase(data) {
             const grid = document.getElementById('registryGrid');
             grid.innerHTML = "";
             if(data.length === 0) {
                 grid.innerHTML = '<div class="col-span-2 text-center py-8 text-gray-400 text-sm">No entertainment entities match your search query.</div>';
-                document.getElementById('counterDisplay').innerText = `0 / 102`;
+                document.getElementById('counterDisplay').innerText = `0 / ${kpopRegistry.length}`;
                 return;
             }
             data.forEach(item => {
@@ -326,7 +351,7 @@
                     <div class="flip-card" onclick="toggleCardFlip(this)">
                         <div class="flip-card-inner">
                             <div class="card-front">
-                                <div>
+                                <div><div>
                                     <h3 class="text-sm font-bold text-white mb-1.5">${item.name}</h3>
                                     <span class="inline-block text-[9px] font-bold bg-[#0b0f19] border border-[#374151] text-purple-400 px-2 py-0.5 rounded uppercase">${item.group}</span>
                                 </div>
@@ -339,8 +364,10 @@
                         </div>
                     </div>`;
             });
-            document.getElementById('counterDisplay').innerText = `${data.length} / 102`;
-        }function renderLiveEvents(data) {
+            document.getElementById('counterDisplay').innerText = `${data.length} / ${kpopRegistry.length}`;
+        }
+
+        function renderLiveEvents(data) {
             const container = document.getElementById('liveEventsContainer');
             container.innerHTML = "";
             if(data.length === 0) {
@@ -349,16 +376,16 @@
             }
             data.forEach(ev => {
                 container.innerHTML += `
-                    <div class="bg-[#1f2937] border-l-4 border-pink-500 p-3 rounded-r-lg flex justify-between items-center shadow-sm">
-                        <div>
+                    <a href="${ev.link}" target="_blank" rel="noopener noreferrer" class="block bg-[#1f2937] border-l-4 border-pink-500 p-3 rounded-r-lg flex justify-between items-center shadow-sm hover:bg-[#374151] transition-all cursor-pointer">
+                        <div class="max-w-[70%]">
                             <h4 class="text-xs font-bold text-white">${ev.group}</h4>
-                            <p class="text-[11px] text-purple-300 mt-0.5">${ev.detail}</p>
+                            <p class="text-[11px] text-purple-300 mt-0.5 leading-snug">${ev.detail}</p>
                         </div>
-                        <div class="text-right">
+                        <div class="text-right flex flex-col items-end">
                             <span class="bg-pink-600 text-white text-[9px] px-1.5 py-0.5 rounded font-bold">${ev.type}</span>
                             <p class="text-[10px] text-gray-400 mt-1">${ev.date}</p>
                         </div>
-                    </div>`;
+                    </a>`;
             });
         }
 
@@ -373,7 +400,7 @@
 
         function filterLiveEvents() {
             const query = document.getElementById('eventSearchBar').value.toLowerCase();
-            renderLiveEvents(activeLiveEvents.filter(e => e.group.toLowerCase().includes(query)));
+            renderLiveEvents(activeLiveEvents.filter(e => e.detail.toLowerCase().includes(query) || e.type.toLowerCase().includes(query)));
         }
 
         function filterCategory(cat, element) {
@@ -387,14 +414,6 @@
             renderRegistryDatabase(cat === 'All' ? kpopRegistry : kpopRegistry.filter(a => a.group === cat));
             document.getElementById('searchBar').value = "";
         }
-
-        setInterval(() => {
-            if(fakeNewPool.length > 0) {
-                const newAnnouncement = fakeNewPool.shift();
-                activeLiveEvents.unshift(newAnnouncement);
-                filterLiveEvents();
-            }
-        }, 15000);
 
         function handleFormSubmit(event) {
             event.preventDefault();
@@ -429,7 +448,7 @@
         }
 
         renderRegistryDatabase(kpopRegistry);
-        renderLiveEvents(activeLiveEvents);
+        fetchLiveKpopUpdates();
 
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
